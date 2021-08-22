@@ -10,8 +10,7 @@ html,body{
     height: 100vh;
     box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
 
-    
-}
+    }
 
 
 body{
@@ -22,7 +21,7 @@ body{
     padding:0;
     display:flex;
     justify-content: center;
-    background-color: black;
+   
    
 }
 

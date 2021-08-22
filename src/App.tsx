@@ -24,22 +24,30 @@ const App = () => {
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
-  const [category, setCategory] = useState("any");
-  const [diffculty, setDiffculty] = useState("easy");
+  const [category, setCategory] = useState("");
+  const [diffculty, setDiffculty] = useState("");
 
   const changeCategory = (event: any) => {
     setCategory(event.label);
     categorySelect = event.value;
-    console.log(event.label);
   };
 
   const changeDiffculty = (event: any) => {
     setDiffculty(event.label);
     diffucultySelect = event.value;
-    console.log(event.label);
   };
 
   const startTrivia = async () => {
+    if (category === "") {
+      alert("Please select a category!");
+      return;
+    }
+
+    if (diffculty === "") {
+      alert("Please choose diffculty");
+      return;
+    }
+
     setLoading(true);
     setGameOver(false);
 
@@ -102,6 +110,7 @@ const App = () => {
               placeholder="Choose Category"
               onChange={changeCategory}
               options={options}
+              required
             />
             <Select
               name="trivia_difficulty"

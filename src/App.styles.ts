@@ -8,6 +8,9 @@ export const GlobalStyle = createGlobalStyle`
 
 html,body{
     height: 100vh;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+
+    
 }
 
 
@@ -19,6 +22,8 @@ body{
     padding:0;
     display:flex;
     justify-content: center;
+    background-color: black;
+   
 }
 
 *{
@@ -89,6 +94,7 @@ export const Wrapper = styled.div`
         width: 100%;
     }
 
+    
 `
 
 
